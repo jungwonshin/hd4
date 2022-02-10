@@ -13,10 +13,11 @@ private:				// private 영역 : 멤버함수에서만 접근 가능
 public:					// public 영역 : 모든 곳에서 접근 가능.
 	void setAge(int value)
 	{
-		age = value;
+		// 인자값의 유효성을 확인후에 객체의 상태를 변경한다.
+		if ( value > 0 && value < 150)
+			age = value;
 	}
 };
-
 int main()
 {
 	Person p;
