@@ -8,7 +8,7 @@ int main()
 //	int score[5];  // 이렇게 하면, 수명이 정해져 있습니다.
 				   // 메모리를 지우고 싶을때 지울수 없습니다.
 
-	int size = 5;
+	int size = 5;	//  동적 할당된 배열 크기
 	int* score = new int[size]; // 이렇게 하면 원할때 지울수 있습니다.
 
 	int num = 0;
@@ -23,9 +23,33 @@ int main()
 
 		score[count] = num;
 		++count;
+		
+		if (count == size)  // 버퍼(배열)이 가득 찼다.!
+		{
+			int* temp = new int[size + 5];
+			
+			memcpy(temp, score, sizeof(int) * size);
+
+			delete[] score; // 기존 배열 제거
+						// score를 지우는것이 아니라
+						// score가 가진 주소의 메모리를제거
+
+			score = temp;
+
+			size = size + 5;
+		}
 	}
 
+	std::cout << "입력한 갯수 : " << count << std::endl;
+	std::cout << "현재 동적 할당된 배열크기 : " << size << std::endl;
 
+	for (int i = 0; i < count; i++)
+	{
+		std::cout << score[i] << ", ";
+	}
+
+	// 더이상 필요없으면 꼭 메모리 제거하세요!!
+	delete[] score; 
 }
 
 
