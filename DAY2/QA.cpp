@@ -38,5 +38,8 @@ void f6(const int& n) {} // 절대 이렇게는 하지 마세요.
 //    인자가
 //    primitive type 이면 : call by value로 하세요!  foo(int n)
 //    user define type이면 : const reference        foo(const Rect& r) 
-
 // 구글에서 "c++ core guideline" 검색해 보세요.. 1번째 링크
+
+// 코드를 작성할때 "이렇게 하는게 좋다" => 흔히 guide line 이라고 합니다.
+// 임베디드 : MISRA-C, MISRA-C++
+// 범용적인 C++ 코딩 규칙 : "c++ core guideline"  
