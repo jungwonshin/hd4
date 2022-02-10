@@ -12,7 +12,7 @@ struct Rect
 };
 // 사용자 정의 타입을 인자로 받을때는
 // 읽기만 한다면 "call by value" 대신 "const reference" 가 좋다.
-void getRectArea(const Rect& r)
+int getRectArea(const Rect& r)
 {
 	return (r.right - r.left) * (r.bottom - r.top);
 }
