@@ -12,8 +12,8 @@ public:
 	Person(const std::string& s, int a) : name(s), age(a) // <== 이 코드가 좋습니다.
 	{
 		// 아래 처럼 초기화하는 것은 좋지 않습니다.
-		name = s;
-		age  = a; 
+		//name = s;
+		//age  = a; 
 	}
 };
 
