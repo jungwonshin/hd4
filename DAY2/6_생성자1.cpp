@@ -30,7 +30,7 @@ int main()
 	// private 에 있다면 아래 코드는 에러 입니다.
 //	Point p1 = { 1, 1 }; 
 
-	Point pt;
+	Point pt;		// 인자가 없는 생성자 호출
 //	pt.init();
 
 	Point pt2(1, 2); // 인자가 2개인 생성자 호출
