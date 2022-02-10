@@ -27,15 +27,14 @@ int main()
 		if (count == size)  // 버퍼(배열)이 가득 찼다.!
 		{
 			int* temp = new int[size + 5];
-			
+
 			memcpy(temp, score, sizeof(int) * size);
+				// 목적지주소, 원본주소, 크기
 
 			delete[] score; // 기존 배열 제거
 						// score를 지우는것이 아니라
 						// score가 가진 주소의 메모리를제거
-
 			score = temp;
-
 			size = size + 5;
 		}
 	}
