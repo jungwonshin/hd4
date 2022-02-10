@@ -30,6 +30,9 @@ int main()
 	std::string s2;	// 1. 디폴트 생성자 호출
 	s2 = "kim";		// 2. 대입연산자 호출( s2.operator=("kim"))
 	
+	// 3. 초기화는 되지만 대입은 안되는 것도 있습니다.
+	const int c = 10; // ok 초기화 가능
+	c = 20; // error. 대입은 안됨.
 
 
 }
