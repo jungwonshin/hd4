@@ -19,9 +19,10 @@ int main()
 	for (auto e : x)
 	{
 	}
-	for (auto e : p) // error
-	{
-	}
+//	for (auto e : p) // error
+//	{
+//	}
 	// 단, STL 의 vector, list, string 등은 모두 가능합니다.
 
+	delete[] p;
 }
