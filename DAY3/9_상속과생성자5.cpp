@@ -8,6 +8,9 @@ class Person
 public:
 //	Person() {}
 	Person(const std::string& n, int a) : name(n), age(a) {}
+
+	int getAge() const { return age; }
+	std::string getName()  const { return name; }
 };
 
 // 1. 디폴트 생성자가 있는 경우가 많긴 하지만, 보다 안전한 타입을 설계할때는
