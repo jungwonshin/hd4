@@ -24,8 +24,20 @@ int main()
 	p1.foo()->foo()->foo()->foo();
 	// (&p1)->foo()
 	p1.goo().goo().goo().goo();
-}
 
+	std::cout << "A" << "B" << "C" << "D"; // 의 원리가 위 코드 입니다.
+	// cout.operator<<("A").operator<<("B") 처럼 됩니다. 5일차에 직접 만들예정
+
+	// 아래 코드는 "멤버함수를 연속적으로 호출"
+	//				함수하나의 실행이 끝나고, 다시 호출
+	p1.goo().goo().goo().goo();
+}
+// 재귀 함수 : 함수 안에서 다시 자신호출
+int factorial(int n)
+{
+	if (n == 1) return 1;
+	return n * factorial(n - 1);
+}
 
 
 
