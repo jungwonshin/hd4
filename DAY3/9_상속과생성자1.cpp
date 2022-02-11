@@ -13,6 +13,7 @@ public:
 
 class Derived : public Base
 {
+	int data2;
 public:
 	Derived()      { std::cout << "Derived()" << std::endl; }
 	Derived(int a) { std::cout << "Derived(int)" << std::endl; }
@@ -21,5 +22,5 @@ public:
 
 int main()
 {
-	Derived d1;
+	Derived d1; // 실행결과 예측해 보세요.
 }
