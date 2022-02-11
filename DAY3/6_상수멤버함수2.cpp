@@ -8,7 +8,8 @@ public:
 	int getArea() { return w * h; }
 };
 
-void foo(Rect r)
+//void foo(Rect r)      // call by value : 복사본을 생성합니다. user type 일때는 절대 사용하지 마세요
+void foo(const Rect& r) // const reference가 좋습니다.
 {
 	int n = r.getArea();
 }
