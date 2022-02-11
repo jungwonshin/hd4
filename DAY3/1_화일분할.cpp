@@ -1,19 +1,14 @@
 // 1_화일분할.cpp
 #include <iostream>
 
-class Point
-{
-	int x, y;
-public:
-	Point(int a, int b) : x(a), y(b) {}
-	~Point() {}
+// 클래스 만드는 방법
+// 1. 클래스 안에 멤버 함수 구현을 포함
+// 2. 멤버 함수 구현은 클래스 외부(소스 파일)에 작성
 
-	void set(int a, int b)
-	{
-		x = a;
-		y = b;
-	}
-};
+// 클래스 사용자는 헤더 파일만 포함하면 됩니다.
+// 단, Point.cpp 파일은 빌드에 포함되어야 합니다.
+#include "Point.h"
+
 int main()
 {
 	Point p(1, 2);
